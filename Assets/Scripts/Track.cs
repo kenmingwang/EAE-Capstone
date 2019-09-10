@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/* Just really bad code here to test stuff out.. */
 public class Track : MonoBehaviour
 {
     float moveSpeed;
@@ -23,9 +24,7 @@ public class Track : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-
-        // 
+    {    
         Vector3 MainPos = MainObject.transform.position;
         Vector3 CurPOs = transform.position;
 
@@ -61,7 +60,7 @@ public class Track : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.name == "MainObject")  // or if(gameObject.CompareTag("YourWallTag"))
+        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.name == "MainObject")
         {
             rBody.velocity = Vector3.zero;
         }
